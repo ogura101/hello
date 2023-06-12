@@ -16,8 +16,10 @@ public class kazuate {
             if (guess == targetNumber) {
                 System.out.println("当たり！おめでとうございます！");
                 break;
-            } else if (Math.abs(guess - targetNumber) >= 20) {
-                System.out.println("大きすぎるか小さすぎるか、かなり離れています！");
+            } else if ((guess - targetNumber) >= 20) {
+                System.out.println("正解はこれより20以上小さい数です！");
+            } else if ((targetNumber - guess) >= 20) {
+                System.out.println("正解はこれより20以上大きい数です！");
             } else if (guess > targetNumber) {
                 System.out.println("もっと小さい数です。");
             } else {
